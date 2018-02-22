@@ -1,0 +1,77 @@
+﻿Neka je data heš tabela inicijalne dimenzije 3 i neka je njen load factor 0.65; Opisati postupak ubacivanja podataka 34, 29, 53, 44, 120, 39, 45, i 40 u tabelu, korišćenjem dvostrukog pretraživanja, gde je sekundarna funkcija h'(k) = 5 – k % 5.
+
+
+34, 29, 53, 44, 120, 39, 45,  40
+
+_ _ _ 
+
+h(34) = 34%3 = 1
+
+_ 34 _
+
+h(29) = 29%3 = 2
+
+_ 34 29 
+
+2/3 = 0.66 load faktor se prebacio idemo na povecanje liste sad je size liste 6
+
+_ _ _ _ _ _ 
+
+h(34) = 34%6 = 4
+
+_ _ _ _ 34 _ _ 
+
+h(29) = 29%6 = 5
+
+_ _ _ _ 34 29 _
+
+h(53) = 53%6 = 5 - zauzeto, sad koristimo sekundarnu funkciju
+
+h'(53) = 5 – 53 % 5 = 5-3 = 2
+
+53 _ _ _ 34 29 _
+
+h(44) = 44%6 = 2
+
+53 _ 44_ 34 29 _
+
+load faktor prebacio idemo na size 12
+
+_ _ _ _ _ _ _ _ _ _ _ _ 
+
+h(34) = 34%12 =10 
+
+_ _ _ _ _ _ _ _ _ _ 34 _ _
+
+
+h(29) = 29%12 = 5
+
+_ _ _ _ _ 29 _ _ _ _ 34 _ _ 
+
+h(53) = 53%12 = 5 zauzeto
+
+h'(53) = 5 – 53 % 5 = 2
+
+_ _ _ _ _ 29 _ 53 _ _ 34 _ _ 
+
+h(44) = 44%12 = 8 
+
+_ _ _ _ _ 29 _ 53 44 _ 34 _ _ 
+
+h(120) = 120%12 = 0
+
+120 _ _ _ _ 29 _ 53 44 _ 34 _ _ 
+
+h(39) = 39%12 = 3
+
+120 _ _ 39 _ 29 _ 53 44 _ 34 _ _ 
+
+h(45) = 45%12 = 9
+
+120 _ _ 39 _ 29 _ 53 44 45 34 _ _
+
+h(40) = 40%12 = 4 
+
+120 _ _ 39 40 29 _ 53 44 45 34 _ _
+
+8/12 = 0,6666 kad smo ubacili osmi element load faktor je prebacio
